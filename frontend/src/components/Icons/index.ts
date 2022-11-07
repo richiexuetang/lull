@@ -4,3 +4,4 @@ export { default as EmptyOnlineFriendIcon } from "./EmptyOnlineFriend";
 export { default as MuteIcon } from "./MuteIcon";
 export { default as DeafenIcon } from "./DeafenIcon";
 export { default as SettingsIcon } from "./SettingsIcon";
+export { default as AuthPageBackground } from "./AuthPageBackground";

@@ -7,9 +7,11 @@ module.exports = {
   output: {
     path: path.join(__dirname, "/dist"),
     filename: "bundle.js",
+    publicPath: "/",
   },
   devServer: {
     static: "./dist",
+    historyApiFallback: true,
   },
   module: {
     rules: [

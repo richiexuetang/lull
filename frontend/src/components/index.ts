@@ -5,3 +5,4 @@ export * from "./Layouts";
 export * from "./Icons";
 export * from "./Titlebar";
 export * from "./Toolbar";
+export * from "./Authentication";
