@@ -1,13 +1,14 @@
 import { Box, chakra, Flex } from "@chakra-ui/react";
+import { UserProfile } from "../..";
 
 const UserSidebar = () => {
   return (
     <Flex direction="column" w="240px" bg="secondary">
-      <chakra.nav display="flex" flexDir="column" flex="1">
+      <chakra.nav display="flex" flexDir="column" flex="1" w="240px">
         <Flex>Searchbar</Flex>
         <Box>Friends Sidebar Main Section</Box>
       </chakra.nav>
-      <chakra.section flex="0 0 auto">UserProfile</chakra.section>
+      <UserProfile />
     </Flex>
   );
 };

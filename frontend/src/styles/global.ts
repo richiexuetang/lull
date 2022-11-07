@@ -13,15 +13,20 @@ export const theme = extendTheme({
         userSelect: "none",
         bg: "transparent",
       },
-      input: {},
-      ul: {},
-      a: {},
+      h2: {
+        display: "block",
+        fontSize: "1.5em",
+        marginBlock: "0.83em",
+        marginInline: "0px",
+        fontWeight: "bold",
+      },
     },
   },
   components: { Button },
   colors: {
     primary: "#36393f",
     secondary: "#2f3136",
+    secondaryAlt: "hsl(220,6.8%,17.3%)",
     tertiary: "#202225",
     cta: {
       red: "#ED4245",
@@ -42,9 +47,18 @@ export const theme = extendTheme({
       charIcons: "#B9BBBE",
       text: "#DCDDDE",
     },
+    text: {
+      muted: "hsl(214,4%,65.3%)",
+    },
     interactive: {
       normal: "#b7babd",
       hover: "hsl(210,calc(var(--saturation-factor, 1)*2.9%),86.7%)",
+    },
+    modifier: {
+      selected: "hsla(217,7.6%,33.5%,0.6)",
+    },
+    status: {
+      danger: "hsl(359,82.6%,59.4%)",
     },
     tooltips: "#18191C",
     userprofile: "#18191C",

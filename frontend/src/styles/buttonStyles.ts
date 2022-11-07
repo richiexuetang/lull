@@ -28,6 +28,21 @@ export const ButtonStyles = {
       h: "24px",
       bg: "cta.green",
     },
+    userProfile: {
+      w: "32px",
+      h: "32px",
+      borderRadius: "4px",
+      color: "interactive.normal",
+      bg: "transparent",
+      _hover: {
+        color: "interactive.hover",
+        backgroundColor: "modifier.selected",
+      },
+      _active: {
+        color: "interactive.hover",
+        backgroundColor: "modifier.selected",
+      },
+    },
   },
   defaultProps: {},
 };

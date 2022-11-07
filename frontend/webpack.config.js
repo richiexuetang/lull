@@ -18,6 +18,11 @@ module.exports = {
         exclude: /node_modules/,
         use: ["babel-loader", "ts-loader"],
       },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif|ico)$/,
+        exclude: /node_modules/,
+        use: ["file-loader?name=[name].[ext]"],
+      },
     ],
   },
   resolve: {
@@ -25,7 +30,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./index.html",
+      template: "./public/index.html",
     }),
   ],
 };

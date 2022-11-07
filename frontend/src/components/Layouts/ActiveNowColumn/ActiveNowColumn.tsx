@@ -1,4 +1,5 @@
 import { Box } from "@chakra-ui/react";
+import { EmptyCard, Heading } from "../../App";
 
 const ActiveNowColumn = () => {
   return (
@@ -8,7 +9,10 @@ const ActiveNowColumn = () => {
       maxW="420px"
       borderLeft="2px solid #3c4147"
     >
-      ActiveNowColumn
+      <Box padding="16px" h="100%" ml="2px">
+        <Heading text="Active Now" />
+        <EmptyCard />
+      </Box>
     </Box>
   );
 };
