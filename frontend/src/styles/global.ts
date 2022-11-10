@@ -49,6 +49,7 @@ export const theme = extendTheme({
     },
     text: {
       muted: "hsl(214,4%,65.3%)",
+      link: "hsl(197,100%,47.8%)",
     },
     interactive: {
       normal: "#b7babd",

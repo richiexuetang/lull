@@ -43,6 +43,22 @@ export const ButtonStyles = {
         backgroundColor: "modifier.selected",
       },
     },
+    textLink: {
+      color: "text.link",
+      h: "auto",
+      display: "inline-block",
+      justifyContent: "center",
+      boxSizing: "border-box",
+      bg: "transparent",
+      ml: "4px",
+      mb: "0",
+      verticalAlign: "bottom",
+      padding: "0",
+      border: "none",
+      _hover: {
+        textDecor: "underline",
+      },
+    },
   },
   defaultProps: {},
 };

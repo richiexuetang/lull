@@ -4,6 +4,7 @@ import { memo } from "react";
 import { useRoutes } from "react-router-dom";
 import {
   ActiveNowColumn,
+  Authentication,
   Layout,
   PeopleColumn,
   ServerSidebar,
@@ -38,7 +39,11 @@ export const Router = memo(() => {
         },
         {
           path: "/login",
-          element: <Login />,
+          element: <Authentication />,
+        },
+        {
+          path: "/register",
+          element: <Authentication />,
         },
         {
           path: "*",
