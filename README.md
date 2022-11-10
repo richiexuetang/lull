@@ -10,3 +10,13 @@
 - React
 - Typescript
 - ChakraUI
+
+# Run Project 
+  # Frontend: 
+    cd frontend
+    yarn install
+    yarn start:dev
+  # Backend:
+    cd backend
+    pip install -r requirements.txt
+    python manage.py runserver

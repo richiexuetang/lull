@@ -1,5 +1,8 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+
+const webpack = require("webpack");
+console.log(process.env.NODE_ENV, "env");
 module.exports = {
   mode: "development",
   entry: "./src/index.tsx",
@@ -10,8 +13,9 @@ module.exports = {
     publicPath: "/",
   },
   devServer: {
-    static: "./dist",
+    port: 3000,
     historyApiFallback: true,
+    static: [{ directory: path.join(__dirname, "/public") }],
   },
   module: {
     rules: [
@@ -19,6 +23,14 @@ module.exports = {
         test: /\.tsx?$/,
         exclude: /node_modules/,
         use: ["babel-loader", "ts-loader"],
+      },
+      {
+        test: /\.(css)$/,
+        use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.html$/i,
+        loader: "html-loader",
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif|ico)$/,
@@ -32,7 +44,12 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./public/index.html",
+      template: path.resolve(__dirname, "public", "index.html"),
+      filename: "./index.html",
+      manifest: "./manifest.json",
+    }),
+    new webpack.DefinePlugin({
+      "process.env.NODE_ENV": JSON.stringify("development"),
     }),
   ],
 };
